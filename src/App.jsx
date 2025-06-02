@@ -4,7 +4,7 @@ import {Routes, Route} from 'react-router-dom'
 import Pokedex from "./pages/Pokedex"
 
 export default function App() {
-  const [listePoke,setListePoke] = useState
+  const [listePoke,setListePoke] = useState([])
 
 
 
