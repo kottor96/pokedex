@@ -1,0 +1,142 @@
+@charset "UTF-8";
+.Feu {
+  background-color: #D62828;
+}
+
+.Eau {
+  background-color: #0077B6;
+}
+
+.Électrik {
+  background-color: #FFD60A;
+}
+
+.Plante {
+  background-color: #2B9348;
+}
+
+.Glace {
+  background-color: #A0E9FF;
+}
+
+.Combat {
+  background-color: #9D0208;
+}
+
+.Poison {
+  background-color: #6A0DAD;
+}
+
+.Sol {
+  background-color: #A47148;
+}
+
+.Vol {
+  background-color: #89CFF0;
+}
+
+.Psy {
+  background-color: #FF4D6D;
+}
+
+.Insecte {
+  background-color: #8AB332;
+}
+
+.Roche {
+  background-color: #8D8D8D;
+}
+
+.Spectre {
+  background-color: #4B0082;
+}
+
+.Dragon {
+  background-color: #6F00FF;
+}
+
+.Ténèbres {
+  background-color: #2E2E2E;
+}
+
+.Acier {
+  background-color: #A8B2B2;
+}
+
+.Fée {
+  background-color: #FFB7D5;
+}
+
+.Normal {
+  background-color: #B8B8A8;
+}
+
+#pokedex {
+  padding: 2rem;
+}
+
+#listePokemon {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.pokeCarte_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: 0 0.5rem;
+}
+.pokeCarte_head h4 {
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+  margin: 0;
+}
+.pokeCarte_head .pokeCarte_id {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.pokeCarte {
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: white;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+.pokeCarte:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+.pokeCarte img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+.pokeCarte h2 {
+  margin-bottom: 0.25rem;
+  font-weight: 700;
+  font-size: 1.25rem;
+  text-transform: capitalize;
+}
+.pokeCarte .types {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+}
+.pokeCarte .types img {
+  width: 24px;
+  height: 24px;
+}
+
+/*# sourceMappingURL=index.css.map */
