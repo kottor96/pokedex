@@ -9,8 +9,11 @@ export default function CartePoke({el}){
                 <img src={el.sprite} alt={el.name} />
             </div>
             <div className="pokeCarte_footer">
-                <p>{el.apiTypes[0].name}</p>
-                <p>{el.apiTypes[1]?.name}</p>
+                <p>{el.apiTypes[0].name} <img src={el.apiTypes[0].image} alt={el.apiTypes[0].name}/></p>
+                {el.apiTypes[1]
+                ?<p>{el.apiTypes[1].name} <img src={el.apiTypes[1].image} alt={el.apiTypes[1].name}/></p>
+                :null
+                }
             </div>
         </div>
     )
