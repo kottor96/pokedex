@@ -1,4 +1,4 @@
-export default function BaRecherche({listeType,filtertype}){
+export default function BaRecherche({listeType,filtertype,filterName}){
 
 
 
@@ -13,7 +13,7 @@ export default function BaRecherche({listeType,filtertype}){
                 >
                     type
                 </button>
-                <ul className="dropdown-menu liste_type" ta>
+                <ul className="dropdown-menu liste_type">
                     <li onClick={()=>filtertype('')}>Tous</li>
                     {listeType.map(el=>(
                         <li key={el.id} onClick={()=>filtertype(el.name)}>{el.name}</li>
@@ -29,6 +29,7 @@ export default function BaRecherche({listeType,filtertype}){
                     className="form-control"
                     aria-label="Sizing example input"
                     aria-describedby="inputGroup-sizing-default"
+                    onChange={(e)=>{filterName(e.target.value)}}
                 />
             </div>
         </>

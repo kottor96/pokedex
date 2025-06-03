@@ -3,7 +3,8 @@
 
 #listePokemon
   display: grid
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr))
+  grid-template-columns: repeat(auto-fit, 250px)
+  justify-content: center
   gap: 1.5rem
 
 
@@ -49,17 +50,23 @@
     flex-direction: column
     align-items: center
     text-align: center
-    transition: transform 0.3s ease, box-shadow 0.3s ease
+    transition: transform 0.3s ease, box-shadow 0.3s ease,
+    
     // cursor: pointer
 
     &:hover
         transform: translateY(-10px)
         box-shadow: 0 8px 16px rgba(0,0,0,0.2)
+        .pokeCarte_body
+            backdrop-filter: brightness(0.5)
+
 
     .pokeCarte_body 
         background-color: rgba(99, 99, 99, 0.42)
         margin-bottom: 1rem
         width: 100%
+        border-radius: 10px
+        transition: backdrop-filter 0.3s ease
         img
             width: 120px
             height: 120px

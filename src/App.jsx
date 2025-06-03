@@ -7,6 +7,9 @@ export default function App() {
   const [listePoke,setListePoke] = useState([])
   const [listeType,setListeType] = useState([])
   const [listeFilter,setListeFilter] = useState('')
+  const [filterType, setFilterType] = useState('');
+  const [filterText, setFilterText] = useState('');
+
 
 
 
@@ -22,18 +25,36 @@ export default function App() {
       .catch((error) => console.error(error));
   },[])
 
+  useEffect(() => {
+    const filtered = listePoke.filter(el => {
+      const matchType = filterType !== ''
+        ? el.apiTypes.some(t => t.name === filterType)
+        : true;
 
-  function filtertype(type) {
-    setListeFilter(
-      listePoke.filter(el =>
-        el.apiTypes.some(t => t.name === type)
-    ))
+    const textMin = filterText.toLowerCase();
+
+    const matchNomId = textMin !== ''
+      ? el.name?.toLowerCase().includes(textMin) || el.id.toString().includes(textMin)
+      : true;
+
+      return matchType && matchNomId;
+    });
+
+    setListeFilter(filtered);
+  }, [filterText, filterType, listePoke]);
+
+  function filtertype(type) {  
+    setFilterType(type)
+  }
+
+  function filterName(text) {
+    setFilterText(text)
   }
 
 
   return(
     <Routes>
-      <Route path="/" element={<Pokedex listePoke={listePoke} listeType={listeType} listeFilter={listeFilter} filtertype={filtertype}/>}/>
+      <Route path="/" element={<Pokedex listePoke={listePoke} listeType={listeType} listeFilter={listeFilter} filtertype={filtertype} filterName={filterName}/>}/>
     </Routes>
   )
 }
