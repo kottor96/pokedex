@@ -4,7 +4,7 @@ import CartePoke from "../components/CartePoke";
 export default function Pokedex({listePoke,listeType,filtertype,listeFilter}) {
     return(
         <section id="pokedex">
-            <div>
+            <div id="recherche">
                 <BaRecherche listeType={listeType} filtertype={filtertype}/>
             </div>
             <div id="listePokemon">

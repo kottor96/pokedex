@@ -71,6 +71,11 @@
   background-color: #B8B8A8;
 }
 
+body {
+  margin: 0;
+  background-color: #f7f7f7;
+}
+
 #pokedex {
   padding: 2rem;
 }
@@ -126,7 +131,6 @@
   align-items: center;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
 }
 .pokeCarte:hover {
   transform: translateY(-10px);
@@ -147,6 +151,28 @@
   font-weight: 700;
   font-size: 1.25rem;
   text-transform: capitalize;
+}
+
+.liste_type li {
+  cursor: pointer;
+  padding: 3px;
+}
+.liste_type li:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+#recherche {
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.bar input {
+  transition: box-shadow 0.2s ease;
+}
+.bar input:focus {
+  box-shadow: inset 0px 0px 0px 4px red !important;
 }
 
 /*# sourceMappingURL=index.css.map */
