@@ -1,0 +1,30 @@
+@use './_variable' as *
+    
+#poke_stat
+    min-height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    flex-direction: column
+    gap: 2rem
+    background-color: rgba(232, 252, 214, 0.8)
+    .carte_stats
+        box-sizing: border-box
+        background-color: rgba(240, 240, 240, 0.85)
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05)
+        display: flex
+        width: 100%
+        .stats
+            flex-grow: 1
+            padding: 2rem
+             background-color: rgba(245, 248, 255, 0.7)
+        .nom
+            display: flex
+            justify-content: space-between
+            background-color: rgba(255, 250, 240, 0.8)
+            padding: 1rem
+    .image
+        padding: 0.2em
+        background-color: rgba(255, 255, 255, 0.8)
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08)
+        border-radius: 0.5rem

@@ -1,6 +1,10 @@
+import { useNavigate } from "react-router-dom"
+
 export default function CartePoke({el}){
+    const navigation = useNavigate()
+
     return(
-        <div className={`pokeCarte ${el.apiTypes[1]?el.apiTypes[1].name:el.apiTypes[0].name}`}>
+        <div onClick={()=>(navigation(`/${el.id}`))} className={`pokeCarte ${el.apiTypes[1]?el.apiTypes[1].name:el.apiTypes[0].name}`}>
             <div className="pokeCarte_head">
                 <h4>{el.name}</h4>
                 <h5 className="pokeCarte_id">{el.pokedexId}</h5>

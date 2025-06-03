@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import axios from 'axios'
 import {Routes, Route} from 'react-router-dom'
 import Pokedex from "./pages/Pokedex"
+import Pokemon from "./pages/pokemon"
 
 export default function App() {
   const [listePoke,setListePoke] = useState([])
@@ -51,10 +52,11 @@ export default function App() {
     setFilterText(text)
   }
 
-
+  
   return(
     <Routes>
       <Route path="/" element={<Pokedex listePoke={listePoke} listeType={listeType} listeFilter={listeFilter} filtertype={filtertype} filterName={filterName}/>}/>
+      <Route path="/:id" element={<Pokemon listeFilter={listeFilter}/>}/>
     </Routes>
   )
 }
